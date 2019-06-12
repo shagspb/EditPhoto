@@ -6,20 +6,13 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.RelativeLayout;
-
-import com.hoanganhtuan95ptit.editphoto.R;
-import com.hoanganhtuan95ptit.editphoto.ui.fragment.EditPhotoFragment;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import com.hoanganhtuan95ptit.editphoto.R;
 
 public class MainActivity extends BaseActivity {
 
@@ -41,14 +34,14 @@ public class MainActivity extends BaseActivity {
         askPermissions(1, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE);
     }
 
-    @Override
+    /*@Override
     public void accept(int requestCode) {
         super.accept(requestCode);
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), 100);
-    }
+    }*/
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
